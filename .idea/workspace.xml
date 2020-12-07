@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f2f3f80-7fc2-43ef-a42a-6137370fea0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Animals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/DB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/endangeredAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/ranger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/sighting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/DataBaseRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
