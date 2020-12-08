@@ -1,0 +1,40 @@
+{{#partial "content"}}
+    {{#if animals}}
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="card text-primary border-primary text-center" style=" height:auto" id="landingCard">
+                        <div class="card-body">
+                            <h3 class="card-title intro">Available Endangered animals</h3>
+                            <table class="table table-dark">
+                                <tbody>
+                                <tr class="intro"style="font-size:15px">
+                                    <th>Animal No.</th>
+                                    <th>Animal Name</th>
+                                    <th>Health</th>
+                                    <th>Age</th>
+                                </tr>
+                                {{#each animals}}
+                                    <tr>
+                                        <td><span></span>{{id}}</td>
+                                        <td><span></span>{{name}}</td>
+                                        <td><span></span>{{health}}</td>
+                                        <td> <span></span>{{age}}</td>
+                                    </tr>
+
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    {{/if}}
+
+{{/partial}}
+
+{{>layout.hbs}}

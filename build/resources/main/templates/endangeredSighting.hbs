@@ -1,0 +1,66 @@
+{{#partial "content"}}
+
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Endangered Sighting</h2>
+                    <form action="/new/endangered" method="POST">
+                        <div class="input-group">
+                            <label for="rangerName">Ranger Name</label>
+                            <select class="form-control" id="rangerName" name="rangerName">
+                                {{#each rangers}}
+                                    <option  value="{{name}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="rangerName">Location Name</label>
+                            <select class="form-control" id="locationName" name="locationName">
+                                {{#each locations}}
+                                    <option  value="{{name}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="animalId">Animal Sighted</label>
+                            <select class="form-control" name="animalId" id="animalId">
+                                {{#each enAnimals}}
+                                    <option value="{{id}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="health">Health</label>
+                            <select class="form-control" name="health" id="health">
+                                <option value="healthy">healthy</option>
+                                <option value="okay">okay</option>
+                                <option value="ill">ill</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="animalId">Animal age</label>
+                            <select class="form-control" name="age" id="age">
+                                <option value="newborn">Newborn</option>
+                                <option value="young">Young</option>
+                                <option value="adult">adult</option>
+                            </select>
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Submit</button><br><br>
+                            <a href="/new/endangeredAnimal" >Add new animal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{{/partial}}
+
+
+
+
+{{>layout.hbs}}
