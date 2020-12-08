@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="models.AnimalsTest" tests="8" skipped="0" failures="8" errors="0" timestamp="2020-12-08T19:26:25" hostname="yitzhak" time="0.033">
+<testsuite name="models.AnimalsTest" tests="8" skipped="0" failures="8" errors="0" timestamp="2020-12-08T20:14:45" hostname="yitzhak" time="0.033">
   <properties/>
-  <testcase name="getName_animalsInstantiatesWithName_true" classname="models.AnimalsTest" time="0.026">
+  <testcase name="getName_animalsInstantiatesWithName_true" classname="models.AnimalsTest" time="0.028">
     <failure message="org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgresql://localhost:5432/virtual_pets_test" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgresql://localhost:5432/virtual_pets_test
 	at org.sql2o.Connection.createConnection(Connection.java:291)
 	at org.sql2o.Connection.&lt;init&gt;(Connection.java:51)
@@ -56,7 +56,7 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgresql:/
 	... 44 more
 </failure>
   </testcase>
-  <testcase name="save_insertsObjectIntoDatabase_true" classname="models.AnimalsTest" time="0.003">
+  <testcase name="save_insertsObjectIntoDatabase_true" classname="models.AnimalsTest" time="0.001">
     <failure message="org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgresql://localhost:5432/virtual_pets_test" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgresql://localhost:5432/virtual_pets_test
 	at org.sql2o.Connection.createConnection(Connection.java:291)
 	at org.sql2o.Connection.&lt;init&gt;(Connection.java:51)
