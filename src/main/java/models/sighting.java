@@ -79,7 +79,7 @@ public class sighting {
     }
 
 
-@Override
+
     public int hashcode(){return Objects.hash(location,name);}
 
     public String getRangerName(){ return name;}
