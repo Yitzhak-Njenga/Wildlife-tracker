@@ -1,0 +1,12 @@
+body{
+    color:brown;
+    font-style: oblique;
+    background-image : url('/images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+h1{
+    color:white
+}
