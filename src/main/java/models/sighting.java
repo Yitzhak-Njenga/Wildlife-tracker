@@ -78,17 +78,26 @@ public class sighting {
         }
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(location, name);
+    }
 
+    public String getRangerName() {
+        return name;
+    }
 
-    public int hashcode(){return Objects.hash(location,name);}
+    public String getLocation() {
+        return location;
+    }
 
-    public String getRangerName(){ return name;}
+    public int getId() {
+        return id;
+    }
 
-    public String getLocation() {return location;}
-
-    public int getId(){ return id;}
-
-    public int getAnimalId(){return animalId;}
+    public int getAnimalId() {
+        return animalId;
+    }
 
 
 }
