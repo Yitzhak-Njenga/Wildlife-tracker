@@ -1,7 +1,7 @@
 models/sighting.java
  models.sighting
-App.java
- App
+models/Animals.java
+ models.Animals
 models/ranger.java
  models.ranger
 models/location.java
@@ -10,5 +10,5 @@ models/DB.java
  models.DB
 models/endangeredAnimal.java
  models.endangeredAnimal
-models/Animals.java
- models.Animals
+App.java
+ App
