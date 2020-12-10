@@ -1,9 +1,10 @@
 package models;
 
+import org.sql2o.Connection;
+
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;
-import org.sql2o.*;
 
 import static models.DB.sql2o;
 
@@ -17,23 +18,15 @@ public class sighting {
     private String health;
     public Timestamp timestamp_sighted;
 
-    public sighting(String name,String location, int animalId,String type){
+    public sighting(String name,String location, int animalId){
         this.location = location;
         this.location= name;
         this.animalId = animalId;
-        this.type = type;
     }
 
     public Timestamp getTimestamp_sighted(){return timestamp_sighted;}
 
-    public sighting(String name, String location, int animalId, String type, String age, String health){
-     this.location = location;
-     this.name = name;
-     this.animalId = animalId;
-     this.type= type;
-     this.age = age;
-     this.health = health;
-    }
+
 
     @Override
     public  boolean equals(Object otherSighting){

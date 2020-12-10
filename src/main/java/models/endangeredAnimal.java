@@ -1,26 +1,26 @@
 package models;
 
-import java.util.List;
-import java.util.Objects;
-import org.sql2o.*;
-import java.sql.Timestamp;
+import org.sql2o.Connection;
 
-public class endangeredAnimal extends Animals {
+import java.util.List;
+
+public class endangeredAnimal {
     private String health;
     private String age;
     private String type;
 
     public static final String ANIMAL_TYPE = "Endangered";
 
+    private String name;
+    private int id;
 
     public endangeredAnimal(String name, String health, String age) {
-        super(name);
-        if (name.equals("") || health.equals("") || age.equals("")) {
-            throw new IllegalArgumentException("Please input all fields as required");
-        }
+
         this.health = health;
         this.age = age;
-        type = ANIMAL_TYPE;
+        this.name= name;
+
+        setType(ANIMAL_TYPE);
     }
 
 
@@ -35,27 +35,58 @@ public class endangeredAnimal extends Animals {
 
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO endangered_animals (name,type,health,age) VALUES (:name,:type,:health,:age)";
+            String sql = "INSERT INTO animals (name,type,health,age) VALUES (:name,:type,:health,:age)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("type", this.type)
                     .addParameter("health", this.health)
                     .addParameter("age", this.age)
-                    .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
+            setId(id);
 
 
         }
     }
 
     public static List<endangeredAnimal> getAll() {
-        String sql = "SELECT * FROM endangered_animals ORDER BY id ASC";
+        String sql = "SELECT * FROM animals WHERE type = 'Endangered' ORDER BY id ASC";
         try (Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(endangeredAnimal.class);
         }
     }
 
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public static String getAnimalType() {
+        return ANIMAL_TYPE;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getAge() {
         return age;

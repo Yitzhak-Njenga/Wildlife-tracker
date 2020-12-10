@@ -1,9 +1,9 @@
 package models;
 
+import org.sql2o.Connection;
+
 import java.util.List;
 import java.util.Objects;
-import org.sql2o.*;
-import java.sql.Timestamp;
 
 public class Animals {
 
@@ -16,12 +16,10 @@ public class Animals {
 
 
     public Animals(String name){
-        if(name.equals("")){
-            throw new IllegalArgumentException("Please enter an animal name.");
-        }
+
         this.name = name;
 
-        this.type = ANIMAL_TYPE;
+        setType(ANIMAL_TYPE);
 
 
     }
@@ -50,15 +48,15 @@ public class Animals {
             this.id = (int) con.createQuery(sql,true)
                     .addParameter("name",this.name)
                     .addParameter("type",this.type)
-                    .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
+            setId(id);
 
 
         }
     }
     public static List<Animals> all() {
-        String sql = "SELECT * FROM animals ORDER BY id ASC";
+        String sql = "SELECT * FROM animals WHERE type = 'Common' ORDER BY id ASC";
         try(Connection con = DB.sql2o.open()){
             return con.createQuery(sql).executeAndFetch(Animals.class);
         }
@@ -87,10 +85,21 @@ public class Animals {
     }
 
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 
-
+    public static String getAnimalType() {
+        return ANIMAL_TYPE;
+    }
 
     public String getName() {
         return name;

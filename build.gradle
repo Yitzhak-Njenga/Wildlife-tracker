@@ -19,5 +19,6 @@ dependencies {
     compile 'org.sql2o:sql2o:1.5.4'
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
     compile "com.sparkjava:spark-core:2.6.0"
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2' // ADD ME FOR POSTGRES VERSION 10.x
 
 }
